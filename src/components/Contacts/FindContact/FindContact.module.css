@@ -1,0 +1,16 @@
+.findContact {
+  margin: 15px 0 35px;
+  width: 430px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.findContact label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: gray;
+}
+.findContact input {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  width: 420px;
+  height: 25px;
+}

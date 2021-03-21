@@ -1,0 +1,16 @@
+.alert {
+  position: absolute;
+  top: 10px;
+  left: 600px;
+  width: 350px;
+  height: 55px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.alert p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+}
