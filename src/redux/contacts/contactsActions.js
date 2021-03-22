@@ -12,12 +12,7 @@ const removeContactsRequest = createAction("contacts/removeRequest");
 const removeContactsSuccess = createAction("contacts/removeSuccess");
 const removeContactsError = createAction("contacts/removeError");
 
-const getFilterValue = createAction("FILTER_ITEM", function prepare(e) {
-  const string = e.target.value;
-  return {
-    payload: string,
-  };
-});
+const getFilterValue = createAction("contacts/changeFilter");
 
 export {
   addContactsRequest,

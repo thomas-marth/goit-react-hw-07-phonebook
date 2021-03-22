@@ -7,7 +7,11 @@ const FindContact = ({ getFilterValue }) => {
   return (
     <div className={styles.findContact}>
       <label htmlFor="findContact">Введите имя для поиска</label>
-      <input id="findContact" type="text" onChange={getFilterValue} />
+      <input
+        id="findContact"
+        type="text"
+        onChange={(event) => getFilterValue(event.target.value)}
+      />
     </div>
   );
 };
