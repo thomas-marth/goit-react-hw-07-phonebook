@@ -30,6 +30,7 @@
   height: 40px;
   color: white;
   background-color: rgb(0, 0, 0);
+  outline: none;
 }
 .contactForm button:hover {
   cursor: pointer;

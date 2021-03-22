@@ -30,6 +30,7 @@
   height: 30px;
   background-color: rgb(218, 17, 17);
   padding: 0;
+  outline: none;
 }
 
 .contactListItem button:hover {
