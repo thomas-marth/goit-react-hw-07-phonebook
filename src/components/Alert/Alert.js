@@ -4,7 +4,7 @@ import styles from "./Alert.module.css";
 const Alert = () => {
   return (
     <div className={styles.alert}>
-      <p>Такой контакт уже есть в списке</p>
+      <p>⚠️ Такой контакт уже есть в списке</p>
     </div>
   );
 };
