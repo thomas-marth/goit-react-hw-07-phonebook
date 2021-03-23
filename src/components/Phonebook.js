@@ -10,7 +10,7 @@ import styles from "./Phonebook.module.css";
 import { connect } from "react-redux";
 import { getItem } from "../redux/contacts/contactsOperations";
 import { statusInOn } from "../redux/status/statusActions";
-import { getContactsItems } from "../redux/contacts/contactsSelectors";
+import selectors from "../redux/contacts/contactsSelectors";
 import { getStatusIson } from "../redux/status/statusSelectors";
 
 class Phonebook extends React.Component {
@@ -47,12 +47,10 @@ class Phonebook extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    items: getContactsItems(state),
-    inOn: getStatusIson(state),
-  };
-};
+const mapStateToProps = (state) => ({
+  items: selectors.getContactsItems(state),
+  inOn: getStatusIson(state),
+});
 
 const mapDispatchToProps = {
   getItem,

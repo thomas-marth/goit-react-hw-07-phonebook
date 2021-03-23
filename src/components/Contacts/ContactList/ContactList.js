@@ -3,10 +3,7 @@ import ContactListItem from "../ContactListItem/ContactListItem";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styles from "./ContactList.module.css";
 import slideTransition from "../transitions/slide.module.css";
-import {
-  getContactsItems,
-  getContactsFilter,
-} from "../../../redux/contacts/contactsSelectors";
+import selectors from "../../../redux/contacts/contactsSelectors";
 import { removeItem } from "../../../redux/contacts/contactsOperations";
 import { connect } from "react-redux";
 
@@ -41,12 +38,10 @@ const ContactList = ({ items, filter = "", removeItem }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    items: getContactsItems(state),
-    filter: getContactsFilter(state),
-  };
-};
+const mapStateToProps = (state) => ({
+  items: selectors.getContactsItems(state),
+  filter: selectors.getContactsFilter(state),
+});
 
 const mapDispatchToProps = {
   removeItem,

@@ -3,7 +3,7 @@ import styles from "./AddContact.module.css";
 import Alert from "../../Alert/Alert";
 import { CSSTransition } from "react-transition-group";
 import alertTransition from "../../Contacts/transitions/alert.module.css";
-import { getContactsItems } from "../../../redux/contacts/contactsSelectors";
+import selectors from "../../../redux/contacts/contactsSelectors";
 import { getStatusExist } from "../../../redux/status/statusSelectors";
 import { connect } from "react-redux";
 import { addNewItem } from "../../../redux/contacts/contactsOperations";
@@ -91,7 +91,7 @@ class AddContact extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    items: getContactsItems(state),
+    items: selectors.getContactsItems(state),
     exist: getStatusExist(state),
   };
 };
